@@ -10,16 +10,15 @@
         animation="property: rotation; to: 0 360 0; loop: true; dur: 2000; easing: linear"
       >
       </a-box>
-      <a-entity hand-controls="left"></a-entity>
-      <a-entity hand-controls="right"></a-entity>
-      <a-entity meta-touch-controls="hand: left"></a-entity>
-      <a-entity meta-touch-controls="hand: right"></a-entity>
+      <a-entity id="rig">
+        <a-camera position="0 1.6 0"></a-camera>
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity
+          oculus-touch-controls="hand: right"
+          oculus-thumbstick-controls
+        ></a-entity>
+      </a-entity>
       <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.6 0"></a-camera>
-      <a-entity light="type: ambient; color: #888"></a-entity>
-      <a-entity
-        light="type: directional; color: #FFF; intensity: 0.5; position: 1 1 1"
-      ></a-entity>
     </a-scene>
   </body>
 </html>
